@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Smart Search</title>
+  <link rel="stylesheet" href="../css/EN-home3.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar Header -->
+  <header class="navbar">
+    <div class="left-section">
+      <img src="https://cdn-icons-png.flaticon.com/512/3031/3031293.png" class="logo" alt="Logo">
+      <a href="EN-home.html" class="site-name-link">
+        <span class="site-name">Smart Search</span>
+      </a>
+    </div>
+
+    <div class="center-section">
+      <div class="nav-items">
+        <div class="about-dropdown">
+          <span class="about-btn">About Us</span>
+          <div class="about-content">
+            <p>Smart Search is an AI-powered contextual search tool that delivers relevant articles and
+              information tailored to your query.</p>
+          </div>
+        </div>
+        <a href="EN-help.html" class="help-link">Help</a>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <span class="lang-toggle" id="lang-toggle">EN 🌐</span>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <a href="AR-home.html" id="switch-to-ar">AR</a>
+      </div>
+    </div>
+
+    <button class="hamburger-btn" id="hamburger-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-items">
+        <div class="mobile-about-section">
+          <span class="mobile-about-btn">About Us</span>
+          <div class="mobile-about-content">
+            <p>Smart Search is an AI-powered contextual search tool that delivers relevant articles and
+              information tailored to your query.</p>
+          </div>
+        </div>
+        <a href="EN-help.html" class="mobile-help">Help</a>
+        <div class="mobile-lang-section">
+          <span class="mobile-lang-toggle">EN 🌐</span>
+          <div class="mobile-lang-dropdown">
+            <a href="AR-home.html" class="switch-to-ar">AR</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="hero">
+      <h1>Smarter Search<span class="highlight">⚡</span><br>Deeper Meaning</h1>
+      <div class="search-bar">
+        <input type="text" id="queryInput" placeholder="Find Arabic articles about mental health awareness">
+        <a id="searchButton" href=""><button>🪄 AI Search</button></a>
+      </div>
+
+      <!-- Floating images -->
+      <div class="visual-layer">
+        <img src="/assets/arrow.webp" alt="arrow" class="arrow-img">
+        <img src="/assets/bulb.webp" class="floating-icon icon-bulb" alt="bulb">
+        <img src="/assets/brain.png" class="floating-icon icon-brain" alt="brain">
+        <img src="/assets/cloud.png" class="floating-icon icon-cloud" alt="cloud">
+        <img src="/assets/robot.jpg" class="floating-icon icon-robot" alt="robot">
+        <img src="/assets/magnifier.webp" class="floating-icon icon-magnifier" alt="magnifier">
+      </div>
+    </section>
+  </main>
+
+  <section class="marketplace-section">
+    <div class="marketplace-header">
+        <h2>Explore Articles</h2>
+        <div class="filter-buttons">
+        </div>
+    </div>
+
+    <div class="cards-container" id="explore-articles">
+    </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 Smart Search. All rights reserved.</p>
+</footer>
+
+<script src="../script.js"></script>
+
+</body>
+</html>

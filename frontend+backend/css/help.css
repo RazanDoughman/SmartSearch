@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: black;
+  text-align: center;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.site-name-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.center-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+/* About Dropdown (Desktop) */
+.about-dropdown {
+  position: relative;
+}
+
+.about-btn {
+  cursor: pointer;
+  font-weight: 500;
+  color: black;
+}
+
+.about-content {
+  display: none;
+  position: absolute;
+  top: 140%;
+  left: 0;
+  width: 280px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+.about-dropdown:hover .about-content {
+  display: block;
+}
+
+/* Help Link (Desktop) */
+.help-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #6495ED; /* Highlight active page */
+  text-decoration: underline;
+}
+
+/* Right Section (Language Toggle - Desktop) */
+.right-section {
+  position: relative;
+}
+
+.lang-toggle {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: 130%;
+  right: 0;
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  min-width: 60px;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.lang-dropdown a {
+  display: block;
+  padding: 4px 0;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.lang-dropdown a:hover {
+  text-decoration: underline;
+  background-color: #eee; /* Optional hover effect */
+}
+
+/* Hamburger Button (Mobile) */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  z-index: 1001;
+}
+
+/* Mobile Nav Styles */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  padding-top: 1rem;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-items {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.mobile-help.active-link {
+  color: #6495ED;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Mobile About Section */
+.mobile-about-section,
+.mobile-help,
+.mobile-lang-section {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-about-section:last-child,
+.mobile-help:last-child,
+.mobile-lang-section:last-child {
+  border-bottom: none;
+}
+
+.mobile-about-btn {
+  display: block;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+}
+
+.mobile-about-content {
+  display: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  border-left: 2px solid #ccc;
+}
+
+.mobile-about-content.show {
+  display: block;
+}
+
+/* Mobile Language Section */
+.mobile-lang-section {
+  position: relative; /* For dropdown positioning */
+}
+
+.mobile-lang-toggle {
+  display: block;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.mobile-lang-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 12;
+}
+
+.mobile-lang-dropdown.show {
+  display: block;
+}
+
+.mobile-lang-dropdown a {
+  display: block;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+}
+
+.mobile-lang-dropdown a:hover {
+  background-color: #eee;
+}
+
+/* Help Content */
+.help-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+.help-container h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #666;
+}
+
+/* FAQ Section */
+.faq h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  text-align: center;
+}
+
+.faq-item {
+  background: white;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2b2b2b;
+}
+
+.faq-item p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.faq-item a {
+  color: #6495ED;
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: #888;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+      flex-wrap: wrap;
+      justify-content: center; /* Center the content horizontally */
+      align-items: center; /* Center the content vertically */
+      padding: 1rem 1rem; /* Adjust padding as needed */
+  }
+
+  .left-section {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      /* Remove position: absolute and transform */
+  }
+
+  .hamburger-btn {
+      display: block;
+      position: absolute; /* Position it to the right */
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #333;
+      z-index: 1001;
+  }
+
+  .center-section,
+  .right-section {
+      display: none;
+  }
+
+  .mobile-nav-items {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+  }
+
+  .mobile-about-section,
+  .mobile-help,
+  .mobile-lang-section {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #eee;
+  }
+
+  .mobile-about-section:last-child,
+  .mobile-help:last-child,
+  .mobile-lang-section:last-child {
+      border-bottom: none;
+  }
+
+  .mobile-about-btn {
+      display: block;
+      padding: 0.5rem 0;
+      font-weight: 500;
+      cursor: pointer;
+      color: #333;
+  }
+
+  .mobile-about-content {
+      display: none;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.5rem;
+      border-left: 2px solid #ccc;
+  }
+
+  .mobile-about-content.show {
+      display: block;
+  }
+
+  .mobile-help {
+      display: block;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      font-weight: 500;
+      color: #333;
+  }
+
+  .mobile-lang-section {
+      position: relative; /* For dropdown positioning */
+  }
+
+  .mobile-lang-toggle {
+      display: block;
+      padding: 0.5rem 0;
+      font-weight: bold;
+      cursor: pointer;
+      color: #333;
+  }
+
+  .mobile-lang-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-top: 0.25rem;
+      padding: 0.5rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 12;
+  }
+
+  .mobile-lang-dropdown.show {
+      display: block;
+  }
+
+  .mobile-lang-dropdown a {
+      display: block;
+      padding: 0.25rem 0;
+      cursor: pointer;
+      color: #333;
+      text-decoration: none;
+  }
+
+  .mobile-lang-dropdown a:hover {
+      background-color: #eee;
+  }
+}
+
+.lang-dropdown.show,
+.mobile-lang-dropdown.show,
+.mobile-about-content.show {
+  display: block;
+}

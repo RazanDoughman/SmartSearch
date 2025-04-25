@@ -1,0 +1,21 @@
+html[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  .left-section {
+    flex-direction: row-reverse;
+  }
+  
+  .search-bar input {
+    padding-left: 20px;
+    padding-right: 15px;
+    direction: rtl;
+    text-align: right;
+  }
+
+  /* Align section title */
+  html[lang="ar"] .marketplace-header h2 {
+    text-align: right;
+    width: 100%;
+  }

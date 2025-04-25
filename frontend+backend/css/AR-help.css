@@ -1,0 +1,60 @@
+html[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  .faq-item {
+    text-align: right;
+  }
+  
+  .site-name-link,
+  .nav-items,
+  .about-btn,
+  .help-link,
+  .footer {
+    text-align: right;
+  }
+  
+  .lang-dropdown,
+  .mobile-lang-dropdown {
+    text-align: right;
+  }
+  
+  .about-content,
+  .mobile-about-content {
+    border-right: 2px solid #ccc;
+    border-left: none;
+  }
+  
+  .faq h2 {
+    text-align: right;
+  }
+  
+  .help-container h1,
+  .intro-text {
+    text-align: right;
+  }
+
+  /* Center Arabic header, intro, and FAQ title */
+.help-container h1,
+.help-container .intro-text,
+.faq h2 {
+  text-align: center !important;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* Center footer text */
+.footer {
+  text-align: center;
+  direction: rtl;
+}
+
+  
+  @media (max-width: 768px) {
+    .mobile-lang-dropdown {
+      left: auto;
+      right: 0;
+    }
+  }
+  

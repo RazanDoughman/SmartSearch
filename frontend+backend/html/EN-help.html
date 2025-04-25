@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help | Smart Search</title>
+    <link rel="stylesheet" href="/css/help.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="left-section">
+            <img src="https://cdn-icons-png.flaticon.com/512/3031/3031293.png" class="logo" alt="Logo">
+            <a href="/html/EN-home.html" class="site-name-link">
+                <span class="site-name">Smart Search</span>
+            </a>
+        </div>
+
+        <div class="center-section">
+            <div class="nav-items">
+                <div class="about-dropdown">
+                    <span class="about-btn">About Us</span>
+                    <div class="about-content">
+                        <p>Smart Search is an AI-powered contextual search tool that delivers relevant articles and
+                            information tailored to your query.</p>
+                    </div>
+                </div>
+                <a href="EN-help.html" class="help-link active-link">Help</a>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <span class="lang-toggle" id="lang-toggle">EN 🌐</span>
+            <div class="lang-dropdown" id="lang-dropdown">
+                <a href="AR-home.html" id="switch-to-ar">AR</a>
+            </div>
+        </div>
+
+        <button class="hamburger-btn" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-items">
+                <div class="mobile-about-section">
+                    <span class="mobile-about-btn">About Us</span>
+                    <div class="mobile-about-content">
+                        <p>Smart Search is an AI-powered contextual search tool that delivers relevant articles and
+                            information tailored to your query.</p>
+                    </div>
+                </div>
+                <a href="EN-help.html" class="mobile-help active-link">Help</a>
+                <div class="mobile-lang-section">
+                    <span class="mobile-lang-toggle">EN 🌐</span>
+                    <div class="mobile-lang-dropdown">
+                        <a href="AR-home.html" class="switch-to-ar">AR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="help-container">
+        <h1>Need Help Using Smart Search?</h1>
+        <p class="intro-text">
+            Smart Search is an AI-powered search engine designed to provide <strong>contextual results</strong> based on the meaning of your query, rather than relying on keywords alone.
+        </p>
+
+        <section class="faq">
+            <h2><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>🔍 How do I search for content?</h3>
+                <p>Just type your question or topic into the search box on the homepage and click "🪄 AI Search". Smart Search will analyze the context of your query and provide relevant resources.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>📚 What type of content is shown?</h3>
+                <p>Smart Search delivers curated articles and resources across a variety of fields, including <strong>Technology</strong>, <strong>Health</strong>, <strong>Science</strong>, and <strong>Culture</strong>. Results are selected based on the context of your query, offering meaningful and relevant content.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>🤔 The results don't match what I expected?</h3>
+                <p>Try rephrasing your question or using more specific words. Since Smart Search understands context, it may interpret vague queries broadly.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>📖 How do I view the full article?</h3>
+                <p>After submitting your search, browse the results and click the <strong>“Read More”</strong> button on any article. You’ll be redirected to the original source website where the article is published.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>🌍 What languages can I search in?</h3>
+                <p>You can search in both <strong>Arabic</strong> and <strong>English</strong>. If you’d like to switch the language interface, you can do so using the language toggle in the top navigation bar.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>⚠️ What if something isn’t working?</h3>
+                <p>If you experience issues, check your internet connection or refresh the page. If the problem persists, email us at <a
+                        href="mailto:supportsmartsearch@gmail.com">supportsmartsearch@gmail.com</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Smart Search. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // --- DOM Element References ---
+        const langToggle = document.getElementById('lang-toggle');
+        const langDropdown = document.getElementById('lang-dropdown');
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileAboutBtn = document.querySelector('.mobile-about-btn');
+        const mobileAboutContent = document.querySelector('.mobile-about-content');
+        const mobileLangToggle = document.querySelector('.mobile-lang-toggle');
+        const mobileLangDropdown = document.querySelector('.mobile-lang-dropdown');
+
+        // --- Desktop Language Toggle ---
+        if (langToggle && langDropdown) {
+            langToggle.addEventListener('click', () => {
+                langDropdown.classList.toggle('show');
+            });
+
+            // Close dropdown if clicked outside
+            document.addEventListener('click', (event) => {
+                if (langToggle && !langToggle.contains(event.target) && !langDropdown.contains(event.target)) {
+                    langDropdown.classList.remove('show');
+                }
+            });
+        }
+
+        // --- Mobile Navigation Toggle ---
+        if (hamburgerBtn && mobileNav) {
+            hamburgerBtn.addEventListener('click', () => {
+                mobileNav.classList.toggle('open');
+            });
+
+            // Close mobile nav if clicked outside
+            document.addEventListener('click', (event) => {
+                if (hamburgerBtn && !hamburgerBtn.contains(event.target) && !mobileNav.contains(event.target) && mobileNav.classList.contains('open')) {
+                    mobileNav.classList.remove('open');
+                }
+            });
+        }
+
+        // --- Mobile About Dropdown Toggle ---
+        if (mobileAboutBtn && mobileAboutContent) {
+            mobileAboutBtn.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent clicks from immediately closing the dropdown
+                mobileAboutContent.classList.toggle('show');
+            });
+        }
+
+        // --- Mobile Language Dropdown Toggle ---
+        if (mobileLangToggle && mobileLangDropdown) {
+            mobileLangToggle.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent clicks from immediately closing the dropdown
+                mobileLangDropdown.classList.toggle('show');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (mobileLangToggle && !mobileLangToggle.contains(event.target) && !mobileLangDropdown.contains(event.target) && mobileLangDropdown.classList.contains('show')) {
+                    mobileLangDropdown.classList.remove('show');
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

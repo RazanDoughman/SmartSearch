@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الرئيسية | البحث الذكي </title>
+  <link rel="stylesheet" href="../css/EN-home3.css" />
+  <link rel="stylesheet" href="../css/AR-home.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script defer src="../script.js"></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="left-section">
+      <a href="AR-home.html" class="site-name-link">
+        <span class="site-name">البحث الذكي</span>
+      </a>
+      <img src="https://cdn-icons-png.flaticon.com/512/3031/3031293.png" class="logo" alt="الشعار">
+    </div>
+
+    <div class="center-section">
+      <div class="nav-items">
+        <div class="about-dropdown">
+          <span class="about-btn">من نحن</span>
+          <div class="about-content">
+            <p>البحث الذكي هو أداة بحث مدعومة بالذكاء الاصطناعي تقدم مقالات ومعلومات ذات صلة بالسياق.
+            </p>
+          </div>
+        </div>
+        <a href="AR-help.html" class="help-link">مساعدة</a>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <span class="lang-toggle" id="lang-toggle">AR 🌐</span>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <a href="EN-home.html" id="switch-to-en">EN</a>
+      </div>
+    </div>
+
+    <button class="hamburger-btn" id="hamburger-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-items">
+        <div class="mobile-about-section">
+          <span class="mobile-about-btn">من نحن</span>
+          <div class="mobile-about-content">
+            <p>البحث الذكي هو أداة بحث مدعومة بالذكاء الاصطناعي تقدم مقالات ومعلومات ذات صلة بالسياق.</p>
+          </div>
+        </div>
+        <a href="AR-help.html" class="mobile-help">مساعدة</a>
+        <div class="mobile-lang-section">
+          <span class="mobile-lang-toggle">AR 🌐</span>
+          <div class="mobile-lang-dropdown">
+            <a href="EN-home.html" class="switch-to-en">EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>بحث أذكى<span class="highlight">⚡</span><br>معنى أعمق</h1>
+    <div class="search-bar">
+      <input type="text" id="queryInput" placeholder="ابحث عن مقالات باللغة العربية حول الصحة النفسية">
+      <a id="searchButton" href=""><button>🪄 بحث ذكي</button></a>
+    </div>
+    <div class="visual-layer">
+      <img src="/assets/arrow.webp" alt="arrow" class="arrow-img">
+      <img src="/assets/bulb.webp" class="floating-icon icon-bulb">
+      <img src="/assets/brain.png" class="floating-icon icon-brain">
+      <img src="/assets/cloud.png" class="floating-icon icon-cloud">
+      <img src="/assets/robot.jpg" class="floating-icon icon-robot">
+      <img src="/assets/magnifier.webp" class="floating-icon icon-magnifier">
+    </div>
+  </section>
+
+  <section class="marketplace-section">
+    <div class="marketplace-header">
+      <h2>استكشف المقالات</h2>
+      <div class="filter-buttons"></div>
+    </div>
+    <div class="cards-container" id="explore-articles"></div>
+  </section>
+</body>
+
+</html>

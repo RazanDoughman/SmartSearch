@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>نتائج البحث | البحث الذكي</title>
+  <link rel="stylesheet" href="/css/EN-search.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="/assets/logo3.jpg" type="image/png">
+  <script src="../script.js" defer></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="left-section">
+      <img src="https://cdn-icons-png.flaticon.com/512/3031/3031293.png" class="logo" alt="الشعار">
+      <a href="AR-home.html" class="site-name-link"><span class="site-name">البحث الذكي</span></a>
+    </div>
+
+    <div class="center-section">
+      <div class="nav-items">
+        <div class="about-dropdown">
+          <span class="about-btn">من نحن</span>
+          <div class="about-content">
+            <p>البحث الذكي هو أداة بحث مدعومة بالذكاء الاصطناعي توفر مقالات ومعلومات ذات صلة وفقًا لاستفسارك.</p>
+          </div>
+        </div>
+        <a href="AR-help.html" class="help-link">مساعدة</a>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <span class="lang-toggle" id="lang-toggle">AR 🌐</span>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <a href="EN-home.html" id="switch-to-en">EN</a>
+      </div>
+    </div>
+
+    <button class="hamburger-btn" id="hamburger-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-items">
+        <div class="mobile-about-section">
+          <span class="mobile-about-btn">من نحن</span>
+          <div class="mobile-about-content">
+            <p>البحث الذكي هو أداة بحث مدعومة بالذكاء الاصطناعي توفر مقالات ومعلومات ذات صلة وفقًا لاستفسارك.</p>
+          </div>
+        </div>
+        <a href="AR-help.html" class="mobile-help">مساعدة</a>
+        <div class="mobile-lang-section">
+          <span class="mobile-lang-toggle">AR 🌐</span>
+          <div class="mobile-lang-dropdown">
+            <a href="EN-home.html" class="switch-to-en">EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="top-bar">
+      <a href="AR-home.html" class="back-button"><i class="fas fa-arrow-right"></i></a>
+      <div class="search-bar-wrapper">
+        <input class="search-input" type="text" placeholder="ابحث عن مقالات عربية تتعلق بالصحة النفسية" id="queryInput" />
+        <button id="searchButton">🪄 بحث ذكي</button>
+      </div>
+    </div>
+
+    <div class="section-title">الوثائق الأكثر صلة</div>
+    <div id="results-container"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المساعدة | البحث الذكي</title>
+  <link rel="stylesheet" href="/css/help.css" />
+  <link rel="stylesheet" href="/css/AR-help.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="left-section">
+      <img src="https://cdn-icons-png.flaticon.com/512/3031/3031293.png" class="logo" alt="الشعار">
+      <a href="/html/AR-home.html" class="site-name-link">
+        <span class="site-name">البحث الذكي</span>
+      </a>
+    </div>
+
+    <div class="center-section">
+      <div class="nav-items">
+        <div class="about-dropdown">
+          <span class="about-btn">من نحن</span>
+          <div class="about-content">
+            <p>البحث الذكي هو محرك بحث مدعوم بالذكاء الاصطناعي يوفر مقالات ومعلومات سياقية حسب استفسارك.</p>
+          </div>
+        </div>
+        <a href="AR-help.html" class="help-link active-link">مساعدة</a>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <span class="lang-toggle" id="lang-toggle">AR 🌐</span>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <a href="EN-home.html" id="switch-to-en">EN</a>
+      </div>
+    </div>
+
+    <button class="hamburger-btn" id="hamburger-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-items">
+        <div class="mobile-about-section">
+          <span class="mobile-about-btn">من نحن</span>
+          <div class="mobile-about-content">
+            <p>البحث الذكي هو محرك بحث مدعوم بالذكاء الاصطناعي يوفر مقالات ومعلومات سياقية حسب استفسارك.</p>
+          </div>
+        </div>
+        <a href="AR-help.html" class="mobile-help active-link">مساعدة</a>
+        <div class="mobile-lang-section">
+          <span class="mobile-lang-toggle">AR 🌐</span>
+          <div class="mobile-lang-dropdown">
+            <a href="EN-home.html" class="switch-to-en">EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="help-container">
+    <h1>هل تحتاج إلى المساعدة؟</h1>
+    <p class="intro-text">
+      البحث الذكي هو محرك بحث مدعوم بالذكاء الاصطناعي يقدم <strong>نتائج سياقية</strong> بناءً على معنى استفسارك، وليس فقط الكلمات المفتاحية.
+    </p>
+
+    <section class="faq">
+      <h2><i class="fa-solid fa-circle-question"></i> الأسئلة المتكررة</h2>
+
+      <div class="faq-item">
+        <h3>🔍 كيف أبدأ البحث؟</h3>
+        <p>ما عليك سوى كتابة سؤالك أو موضوعك في مربع البحث على الصفحة الرئيسية، ثم الضغط على "🪄 بحث ذكي". سيحلل المحرك السياق ويعرض مقالات مناسبة.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>📚 ما نوع المحتوى المعروض؟</h3>
+        <p>يعرض البحث الذكي مقالات منتقاة في مجالات مثل <strong>التكنولوجيا</strong>، <strong>الصحة</strong>، <strong>العلوم</strong>، و<strong>الثقافة</strong>، بناءً على السياق.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>🤔 النتائج غير دقيقة؟</h3>
+        <p>حاول إعادة صياغة سؤالك أو استخدام كلمات أكثر تحديدًا. فهم السياق قد يؤدي إلى تفسير واسع للسؤال.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>📖 كيف أقرأ المقال كاملًا؟</h3>
+        <p>بعد البحث، يمكنك النقر على زر <strong>“اقرأ المزيد”</strong> في أي بطاقة، وسينقلك إلى المصدر الأصلي.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>🌍 هل يمكنني البحث بلغات متعددة؟</h3>
+        <p>يمكنك البحث باللغتين <strong>العربية</strong> و<strong>الإنجليزية</strong>. لتغيير اللغة، استخدم زر التبديل في الشريط العلوي.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>⚠️ واجهت مشكلة؟</h3>
+        <p>تحقق من الاتصال بالإنترنت أو أعد تحميل الصفحة. إذا استمرت المشكلة، راسلنا على <a href="mailto:supportsmartsearch@gmail.com">supportsmartsearch@gmail.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 البحث الذكي. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script>
+    // --- DOM Element References ---
+    const langToggle = document.getElementById('lang-toggle');
+    const langDropdown = document.getElementById('lang-dropdown');
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileAboutBtn = document.querySelector('.mobile-about-btn');
+    const mobileAboutContent = document.querySelector('.mobile-about-content');
+    const mobileLangToggle = document.querySelector('.mobile-lang-toggle');
+    const mobileLangDropdown = document.querySelector('.mobile-lang-dropdown');
+
+    // --- Desktop Language Toggle ---
+    if (langToggle && langDropdown) {
+        langToggle.addEventListener('click', () => {
+            langDropdown.classList.toggle('show');
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', (event) => {
+            if (langToggle && !langToggle.contains(event.target) && !langDropdown.contains(event.target)) {
+                langDropdown.classList.remove('show');
+            }
+        });
+    }
+
+    // --- Mobile Navigation Toggle ---
+    if (hamburgerBtn && mobileNav) {
+        hamburgerBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('open');
+        });
+
+        // Close mobile nav if clicked outside
+        document.addEventListener('click', (event) => {
+            if (hamburgerBtn && !hamburgerBtn.contains(event.target) && !mobileNav.contains(event.target) && mobileNav.classList.contains('open')) {
+                mobileNav.classList.remove('open');
+            }
+        });
+    }
+
+    // --- Mobile About Dropdown Toggle ---
+    if (mobileAboutBtn && mobileAboutContent) {
+        mobileAboutBtn.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent clicks from immediately closing the dropdown
+            mobileAboutContent.classList.toggle('show');
+        });
+    }
+
+    // --- Mobile Language Dropdown Toggle ---
+    if (mobileLangToggle && mobileLangDropdown) {
+        mobileLangToggle.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent clicks from immediately closing the dropdown
+            mobileLangDropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (mobileLangToggle && !mobileLangToggle.contains(event.target) && !mobileLangDropdown.contains(event.target) && mobileLangDropdown.classList.contains('show')) {
+                mobileLangDropdown.classList.remove('show');
+            }
+        });
+    }
+</script>
+
+</body>
+
+</html>

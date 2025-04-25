@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search | SmartSearch</title>
+    <link rel="stylesheet" href="/css/EN-search.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="/assets/logo3.jpg" type="image/png">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="left-section">
+      <img src="https://cdn-icons-png.flaticon.com/512/3031/3031293.png" class="logo" alt="Logo">
+      <a href="EN-home.html" class="site-name-link"><span class="site-name">Smart Search</span></a>
+    </div>
+
+    <div class="center-section">
+      <div class="nav-items">
+          <div class="about-dropdown">
+            <span class="about-btn">About Us</span>
+            <div class="about-content">
+              <p>Smart Search is an AI-powered contextual search tool that delivers relevant articles and
+                information tailored to your query.</p>
+            </div>
+          </div>
+          <a href="help.html" class="help-link">Help</a>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <span class="lang-toggle" id="lang-toggle">EN 🌐</span>
+      <div class="lang-dropdown" id="lang-dropdown"><a href="arabic.html" id="switch-to-ar">AR</a></div>
+    </div>
+
+    <button class="hamburger-btn" id="hamburger-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-items">
+        <div class="mobile-about-section">
+          <span class="mobile-about-btn">About Us</span>
+          <div class="mobile-about-content">
+            <p>Smart Search is an AI-powered contextual search tool that delivers relevant articles and
+              information tailored to your query.</p>
+          </div>
+        </div>
+        <a href="help.html" class="mobile-help">Help</a>
+        <div class="mobile-lang-section">
+          <span class="mobile-lang-toggle">EN 🌐</span>
+          <div class="mobile-lang-dropdown">
+            <a href="AR-home.html" class="switch-to-ar">AR</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="top-bar">
+      <a href="EN-home.html" class="back-button"><i class="fas fa-arrow-left"></i></a>
+      <div class="search-bar-wrapper">
+          <input class="search-input" type="text" placeholder="Find Arabic articles about mental health awareness" id="queryInput" />
+          <button id="searchButton">🪄 AI Search</button>
+      </div>
+    </div>
+
+    <div class="section-title">Relevant Documents Found</div>
+
+    <div id="results-container">
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Smart Search. All rights reserved.</p>
+</footer>
+
+  <script src="../script.js" defer></script>
+
+</body>
+</html>
