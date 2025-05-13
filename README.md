@@ -75,16 +75,7 @@ SmartSearch was designed with simplicity, clarity, and bilingual inclusivity in 
 
 Both sections are available in both Arabic and English and auto-adjusts depending on the selected language.
 
-#### SmartSearch was built with clarity, ease of use, and accessibility at its core—making it a powerful tool for both casual readers and researchers in Arabic and English contexts.
-
-
-### **Try It Out**
-
-SmartSearch will soon be available online for public access!
-
-You'll be able to test the search engine directly through a simple web interface, where you can enter queries in Arabic or English and receive contextually matched results in real-time.
-
-🔗 **Website:** *Coming Soon — [Deployment URL will be added here]*  
+#### SmartSearch was built with clarity, ease of use, and accessibility at its core—making it a powerful tool for both casual readers and researchers in Arabic and English contexts. 
 
 ### Team
 
